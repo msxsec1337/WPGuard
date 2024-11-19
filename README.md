@@ -23,16 +23,26 @@ python wpguard.py
 ```
 
 ## Program features
-- Detect WordPress version using meta tag generator.
-- Identify vulnerable WordPress plugins based on URL and page information.
-- Check brute-force login vulnerability on wp-login.php.
-- Validate SSL/TLS (HTTPS) presence.
-- Check HTTP header security such as Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, and X-XSS-Protection.
-- Detect open administrative pages, such as wp-admin and wp-login.php.
-- Check sensitive files such as wp-config.php, .htaccess, readme.html, and license.txt.
-- Detect WordPress theme used based on information on the page.
-- Identify WordPress REST API to exploit potential user data.
-- Check WordPress JSON to access user list.
+- WordPress Version Detection:
+Uses meta tags or the presence of WordPress-specific content to detect the version of WordPress a site is running.
+
+- Vulnerable Plugin Detection:
+Compares links on the site against a dictionary of known vulnerabilities to flag potential risks.
+
+- Login Bruteforce Vulnerability Check:
+Checks for the presence of wp-login.php, which could indicate susceptibility to brute-force attacks.
+
+- SSL Verification:
+Verifies if the site uses HTTPS for secure communication.
+
+- HTTP Header Security Check:
+Checks for the presence of important HTTP security headers like Strict-Transport-Security, X-Content-Type-Options, etc.
+
+- wp-admin Access Check:
+Verifies whether sensitive admin URLs (/wp-admin and /wp-login.php) are exposed.
+
+- Sensitive File Exposure:
+Looks for publicly accessible files like wp-config.php, .htaccess, readme.html, and license.txt.
 
 ## Contact
 
